@@ -1,0 +1,132 @@
+[
+    {
+        "name": "ItemNames",
+        "key": "ItemNames",
+        "children": [
+            {
+                "name": "CreateSingle",
+                "url": "ItemNamesCreateSingle.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowWithInsert",
+                "url": "ItemNamesShow.html",
+                "icon": "bi bi-file-earmark-plus"
+            }
+        ]
+    },
+    {
+        "name": "FetchColumns",
+        "key": "fetchColumns",
+        "icon": "bi bi-back",
+        "children": [
+            {
+                "name": "Simple",
+                "url": "fetchColumns-Simple.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "SimplePageWise",
+                "url": "fetchColumns-SimplePageNation.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Serial",
+                "url": "fetchColumns-Serial.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "SerialPageWise",
+                "url": "fetchColumns-SerialPageNation.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "SerialPageCustom",
+                "url": "fetchColumns-SerialPageCustom.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "SerialPageCall",
+                "url": "fetchColumns-SeriPageCusCall.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "FixedColumns",
+        "key": "fixedColumns",
+        "icon": "bi bi-back",
+        "children": [
+            {
+                "name": "Simple",
+                "url": "FixedColumns-Simple.html"
+            },
+            {
+                "name": "ShowAll",
+                "url": "fixedColumns-ShowAll.html"
+            },
+            {
+                "name": "Images",
+                "url": "FixedColumns-Images.html"
+            }
+        ]
+    },
+    {
+        "name": "SocialMedia",
+        "key": "socialMedia",
+        "icon": "bi bi-back",
+        "children": [
+            {
+                "name": "Call",
+                "url": "socialMedia-SeriPageCusCall.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "WhatsApp",
+                "url": "socialMedia-WhatsApp.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "GDrive",
+                "url": "socialMedia-WA-GDrive.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Charts",
+        "key": "charts",
+        "icon": "bi bi-back",
+        "children": [
+            {
+                "name": "Bar",
+                "url": "charts-Bar.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Sort",
+        "key": "sort",
+        "icon": "bi bi-back",
+        "children": [
+            {
+                "name": "GraduationCGPA",
+                "url": "sort-GraduationCGPA.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Import",
+        "key": "import",
+        "icon": "bi bi-back",
+        "children": [
+            {
+                "name": "Simple",
+                "url": "import-Simple.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    }
+]
