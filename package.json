@@ -1,0 +1,21 @@
+{
+  "name": "bootstrapbybvite",
+  "version": "1.0.0",
+  "description": "boostrap 5 implementation by bite",
+  "main": "vite.config.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.79.4",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
+  }
+}
