@@ -7,6 +7,12 @@ let StartFunc = () => {
 let ClickFunc = () => {
     console.log("button clicked");
 
+    let jVarLocalMessageContainerId = document.getElementById('MessageContainerId');
+
+    let jVarLocalTemplateFromHtml = document.getElementById('TemplateFromSendId');
+    let clone = jVarLocalTemplateFromHtml.content.cloneNode('true');
+
+    jVarLocalMessageContainerId.appendChild(clone)
 };
 
 StartFunc();
