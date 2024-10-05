@@ -1,0 +1,18 @@
+[
+    {
+        "Type": "Send",
+        "Message": "Hai"
+    },
+    {
+        "Type": "Send",
+        "Message": "Hello"
+    },
+    {
+        "Type": "Send",
+        "Message": "How are you"
+    },
+    {
+        "Type": "Recieve",
+        "Message": "I am fine"
+    }
+]

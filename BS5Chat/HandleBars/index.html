@@ -231,7 +231,24 @@
         </li>
     </template>
 
-    <script type="module" src="./Js/index.js"></script>
+    <template id="TemplateForChatId">
+        {{#each ChatArray}}
+        {{#if this.IsSend}}
+        <li class="repaly">
+            <p> {{this.Message}} </p>
+            <span class="time">10:16 am</span>
+        </li>
+        {{else}}
+        <li class="sender">
+            <p> {{this.Message}} </p>
+            <span class="time">10:32 am</span>
+        </li>
+        {{/if}}
+        {{/each}}
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script type="module" src="./Js/entryFile.js"></script>
 </body>
 
 </html>
