@@ -14,5 +14,9 @@
     {
         "Type": "Recieve",
         "Message": "I am fine"
+    },
+    {
+        "Type": "Recieve",
+        "Message": "How are you"
     }
 ]
