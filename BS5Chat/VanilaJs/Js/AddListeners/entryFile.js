@@ -1,5 +1,8 @@
+import { StartFunc as LoadChatId } from "./LoadChatId/entryFile.js";
+
 let StartFunc = () => {
     jFLocalAddListeners();
+    LoadChatId();
 };
 
 let jFLocalAddListeners = () => {

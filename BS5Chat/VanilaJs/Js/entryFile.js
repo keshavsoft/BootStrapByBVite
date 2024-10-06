@@ -1,9 +1,9 @@
 import { StartFunc as AddListeners } from "./AddListeners/entryFile.js";
 
 let StartFunc = () => {
-    // AddListeners();
+    AddListeners();
     // Load messages from local storage when the page loads
-    LoadMessages().then();
+    // LoadMessages().then();
 };
 
 let jFLocalAddListeners = () => {
