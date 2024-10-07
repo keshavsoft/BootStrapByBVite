@@ -19,6 +19,8 @@
 </head>
 
 <body>
+
+
     <!-- char-area -->
     <section class="message-area">
         <div class="container">
@@ -138,7 +140,6 @@
                                                             data-bs-toggle="dropdown" aria-expanded="false"><i
                                                                 class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
                                                         <ul class="dropdown-menu">
-
                                                             <li><a class="dropdown-item" href="#" id="DeleteAllMessages">Delete All Messages</a></li>
 
                                                         </ul>
@@ -159,13 +160,10 @@
 
 
                                     <div class="send-box">
-
-                                            <input type="text" class="form-control" aria-label="message…"
-                                                placeholder="Write message…" id="MessageInputId">
-                                            <button type="button" id="SendButtonId"><i class="fa fa-paper-plane"
-                                                    aria-hidden="true"></i> Send</button>
-                                            <button type="button" id="ReceiveButtonId"><i class="fa fa-paper-plane"
-                                                    aria-hidden="true"></i> Receive</button>
+                                        <form action="">
+                                            <input type="text" class="form-control" aria-label="message…" placeholder="Write message…" id="MessageInputId">
+                                            <button type="button" id="SendButtonId"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
+                                            <button type="button" id="ReceiveButtonId"><i class="fa fa-paper-plane" aria-hidden="true"></i> Receive</button>
                                         </form>
                                         <div id="MessageContainerId"></div>
 
@@ -232,14 +230,7 @@
         </li>
     </template>
 
-    <template id="TemplateFromReceiveId">
-        <li class="sender">
-            <p> Hey, Are you there? </p>
-            <span class="time">10:32 am</span>
-        </li>
-    </template>
-
-    <script type="module" src="./Js/index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>

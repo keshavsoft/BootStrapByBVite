@@ -1,18 +1,12 @@
-import StartFunc from '../BS5Chat/VanilaJs/js/StartFunc.js';
-import HandleFileUpload from '../BS5Chat/VanilaJs/js/HandleFileUpload.js';
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === "Enter" && !event.ctrlKey) {
-        event.preventDefault();
-        HandleFileUpload(event, 'send');
-    } else if (event.key === "Enter" && event.ctrlKey) {
-        event.preventDefault();
-        HandleFileUpload(event, 'receive');
-    }
-});
-
+import { StartFunc as AddListeners } from "./AddListeners/entryFile.js";
 
 let StartFunc = () => {
+    // AddListeners();
+    // Load messages from local storage when the page loads
+    LoadMessages().then();
+};
+
+let jFLocalAddListeners = () => {
     let jVarLocalSendButtonId = document.getElementById('SendButtonId');
     jVarLocalSendButtonId.addEventListener("click", ClickFunc);
 
@@ -32,19 +26,18 @@ let StartFunc = () => {
             ReceiveFunc();
         }
     });
-
-    // Load messages from local storage when the page loads
-    LoadMessages();
 };
 
-let jFLocalForTemplate = (message, templateId) => {
+let jFLocalForTemplate = ({ inChatArray }) => {
     let jVarLocalMessageContainerId = document.getElementById('MessageContainerId');
+    let jVarLocalTemplateForChatId = document.getElementById('TemplateForChatId');
+    let clone = jVarLocalTemplateForChatId.content.cloneNode('true');
+    const s = new XMLSerializer();
+    const str = s.serializeToString(clone);
 
-    let jVarLocalTemplateFromHtml = document.getElementById(templateId);
-    let clone = jVarLocalTemplateFromHtml.content.cloneNode(true);
-    clone.querySelector("p").innerHTML = message;
+    var template = Handlebars.compile(str);
 
-    jVarLocalMessageContainerId.appendChild(clone);
+    jVarLocalMessageContainerId.innerHTML = template({ ChatArray: inChatArray });
 };
 
 let jFLocalMessageInputId = () => {
@@ -95,12 +88,16 @@ let SaveMessage = (message, type) => {
     return index;
 };
 
-let LoadMessages = () => {
-    let messages = JSON.parse(localStorage.getItem('messages')) || [];
-    messages.forEach((msgObj, index) => {
-        let templateId = msgObj.type === 'send' ? 'TemplateFromSendId' : 'TemplateFromReceiveId';
-        jFLocalForTemplate(msgObj.message, templateId, index);
-    });
+let LoadMessages = async () => {
+    let messages = await jFLocalFetch();
+
+    jFLocalForTemplate({ inChatArray: messages });
+};
+
+let jFLocalFetch = async () => {
+    const response = await fetch('chat.json');
+    const movies = await response.json();
+    return movies;
 };
 
 let DeleteAllMessages = () => {

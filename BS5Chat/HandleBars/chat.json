@@ -1,0 +1,27 @@
+[
+    {
+        "Type": "Send",
+        "IsSend": true,
+        "Message": "Hai"
+    },
+    {
+        "Type": "Send",
+        "IsSend": true,
+        "Message": "Hello"
+    },
+    {
+        "Type": "Send",
+        "IsSend": true,
+        "Message": "How are you"
+    },
+    {
+        "Type": "Recieve",
+        "IsSend": false,
+        "Message": "I am fine"
+    },
+    {
+        "Type": "Recieve",
+        "IsSend": false,
+        "Message": "How are you"
+    }
+]

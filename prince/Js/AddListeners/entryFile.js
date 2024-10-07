@@ -1,18 +1,8 @@
-import StartFunc from '../BS5Chat/VanilaJs/js/StartFunc.js';
-import HandleFileUpload from '../BS5Chat/VanilaJs/js/HandleFileUpload.js';
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === "Enter" && !event.ctrlKey) {
-        event.preventDefault();
-        HandleFileUpload(event, 'send');
-    } else if (event.key === "Enter" && event.ctrlKey) {
-        event.preventDefault();
-        HandleFileUpload(event, 'receive');
-    }
-});
-
-
 let StartFunc = () => {
+    jFLocalAddListeners();
+};
+
+let jFLocalAddListeners = () => {
     let jVarLocalSendButtonId = document.getElementById('SendButtonId');
     jVarLocalSendButtonId.addEventListener("click", ClickFunc);
 
@@ -32,9 +22,6 @@ let StartFunc = () => {
             ReceiveFunc();
         }
     });
-
-    // Load messages from local storage when the page loads
-    LoadMessages();
 };
 
 let jFLocalForTemplate = (message, templateId) => {
@@ -95,17 +82,4 @@ let SaveMessage = (message, type) => {
     return index;
 };
 
-let LoadMessages = () => {
-    let messages = JSON.parse(localStorage.getItem('messages')) || [];
-    messages.forEach((msgObj, index) => {
-        let templateId = msgObj.type === 'send' ? 'TemplateFromSendId' : 'TemplateFromReceiveId';
-        jFLocalForTemplate(msgObj.message, templateId, index);
-    });
-};
-
-let DeleteAllMessages = () => {
-    localStorage.removeItem('messages');
-    document.getElementById('MessageContainerId').innerHTML = '';
-};
-
-StartFunc();
+export { StartFunc };

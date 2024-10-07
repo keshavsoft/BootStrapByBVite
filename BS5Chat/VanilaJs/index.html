@@ -138,9 +138,10 @@
                                                             data-bs-toggle="dropdown" aria-expanded="false"><i
                                                                 class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
                                                         <ul class="dropdown-menu">
-
-                                                            <li><a class="dropdown-item" href="#" id="DeleteAllMessages">Delete All Messages</a></li>
-
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    id="DeleteAllMessages">Delete All Messages</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    id="LoadChatId">Load Chat</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -159,7 +160,7 @@
 
 
                                     <div class="send-box">
-
+                                        <form action="">
                                             <input type="text" class="form-control" aria-label="message…"
                                                 placeholder="Write message…" id="MessageInputId">
                                             <button type="button" id="SendButtonId"><i class="fa fa-paper-plane"
@@ -173,10 +174,12 @@
                                             <div class="attach">
                                                 <div class="button-wrapper">
                                                     <span class="label">
-                                                        <img class="img-fluid" src="" alt=""> attached file
-                                                    </span>
-                                                    <input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File" aria-label="Upload File">
-                                                    <span id="fileName"></span>
+                                                        <img class="img-fluid"
+                                                            src="https://mehedihtml.com/chatbox/assets/img/upload.svg"
+                                                            alt="image title"> attached file
+                                                    </span><input type="file" name="upload" id="upload"
+                                                        class="upload-box" placeholder="Upload File"
+                                                        aria-label="Upload File">
                                                 </div>
 
                                                 <select class="form-control" id="exampleFormControlSelect1">
@@ -220,15 +223,6 @@
         <li class="repaly">
             <p>yes!</p>
             <span class="time">10:16 am</span>
-            <img class="uploaded-file" src="" width="20%" alt="Uploaded File" style="display: none; margin-left: 80%;">
-        </li>
-    </template>
-    
-    <template id="TemplateFromReceiveId">
-        <li class="sender">
-            <p> Hey, Are you there? </p>
-            <span class="time">10:32 am</span>
-            <img class="uploaded-file" src="" width="20%" alt="Uploaded File" style="display: none;">
         </li>
     </template>
 
@@ -239,7 +233,7 @@
         </li>
     </template>
 
-    <script type="module" src="./Js/index.js"></script>
+    <script type="module" src="./Js/entryFile.js"></script>
 </body>
 
 </html>
