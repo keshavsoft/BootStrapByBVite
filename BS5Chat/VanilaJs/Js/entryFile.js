@@ -6,24 +6,4 @@ let StartFunc = () => {
     // LoadMessages().then();
 };
 
-let jFLocalForTemplate = (message, templateId) => {
-    let jVarLocalMessageContainerId = document.getElementById('MessageContainerId');
-
-    let jVarLocalTemplateFromHtml = document.getElementById(templateId);
-    let clone = jVarLocalTemplateFromHtml.content.cloneNode(true);
-    clone.querySelector("p").innerHTML = message;
-
-    jVarLocalMessageContainerId.appendChild(clone);
-};
-
-let jFLocalMessageInputId = () => {
-    let jVarLocalMessageInputId = 'MessageInputId';
-    let jVarLocalHtmlId = document.getElementById(jVarLocalMessageInputId);
-
-    if (jVarLocalHtmlId !== null) {
-        return jVarLocalHtmlId.value.trim();
-    }
-    return '';
-};
-
 StartFunc();

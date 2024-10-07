@@ -1,19 +1,16 @@
-import { StartFunc as SendButtonId } from "./SendButtonId/entryFile.js";
-import { StartFunc as ReceiveButtonId } from "./ReceiveButtonId/entryFile.js";
+import { StartFunc as LoadChatId } from "./LoadChatId/entryFile.js";
 
 let StartFunc = () => {
     jFLocalAddListeners();
-    SendButtonId();
-    ReceiveButtonId();
+    LoadChatId();
 };
 
-
 let jFLocalAddListeners = () => {
-    // let jVarLocalSendButtonId = document.getElementById('SendButtonId');
-    // jVarLocalSendButtonId.addEventListener("click", ClickFunc);
+    let jVarLocalSendButtonId = document.getElementById('SendButtonId');
+    jVarLocalSendButtonId.addEventListener("click", ClickFunc);
 
-    // let jVarLocalReceiveButtonId = document.getElementById('ReceiveButtonId');
-    // jVarLocalReceiveButtonId.addEventListener("click", ReceiveFunc);
+    let jVarLocalReceiveButtonId = document.getElementById('ReceiveButtonId');
+    jVarLocalReceiveButtonId.addEventListener("click", ReceiveFunc);
 
     let jVarLocalDeleteAllMessages = document.getElementById('DeleteAllMessages');
     jVarLocalDeleteAllMessages.addEventListener("click", DeleteAllMessages);

@@ -140,6 +140,8 @@
                                                         <ul class="dropdown-menu">
                                                             <li><a class="dropdown-item" href="#"
                                                                     id="DeleteAllMessages">Delete All Messages</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    id="LoadChatId">Load Chat</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -160,7 +162,7 @@
                                     <div class="send-box">
                                         <form action="">
                                             <input type="text" class="form-control" aria-label="message…"
-                                                placeholder="Write message…" id="MessageInputId" autofocus>
+                                                placeholder="Write message…" id="MessageInputId">
                                             <button type="button" id="SendButtonId"><i class="fa fa-paper-plane"
                                                     aria-hidden="true"></i> Send</button>
                                             <button type="button" id="ReceiveButtonId"><i class="fa fa-paper-plane"
@@ -231,24 +233,7 @@
         </li>
     </template>
 
-    <template id="TemplateForChatId">
-        {{#each ChatArray}}
-        {{#if this.IsSend}}
-        <li class="repaly">
-            <p> {{this.Message}} </p>
-            <span class="time">10:16 am</span>
-        </li>
-        {{else}}
-        <li class="sender">
-            <p> {{this.Message}} </p>
-            <span class="time">10:32 am</span>
-        </li>
-        {{/if}}
-        {{/each}}
-    </template>
-
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script type="module" src="./Js/entryFile.js"></script>
+    <script type="module" src="./Js/StartFunc.js"></script>
 </body>
 
 </html>
