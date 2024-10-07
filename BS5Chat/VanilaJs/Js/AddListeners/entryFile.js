@@ -1,13 +1,13 @@
 import { StartFunc as SendButtonId } from "./SendButtonId/entryFile.js";
 import { StartFunc as ReceiveButtonId } from "./ReceiveButtonId/entryFile.js";
 import { StartFunc as DeleteAllMessages } from "./DeleteAllMessages/entryFile.js";
+
 let StartFunc = () => {
     jFLocalAddListeners();
     SendButtonId();
     ReceiveButtonId();
     DeleteAllMessages();
 };
-
 
 let jFLocalAddListeners = () => {
     // let jVarLocalSendButtonId = document.getElementById('SendButtonId');
