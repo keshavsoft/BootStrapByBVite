@@ -1,10 +1,11 @@
 import { StartFunc as SendButtonId } from "./SendButtonId/entryFile.js";
 import { StartFunc as ReceiveButtonId } from "./ReceiveButtonId/entryFile.js";
-
+import { StartFunc as DeleteAllMessages } from "./DeleteAllMessages/entryFile.js";
 let StartFunc = () => {
     jFLocalAddListeners();
     SendButtonId();
     ReceiveButtonId();
+    DeleteAllMessages();
 };
 
 
@@ -15,8 +16,8 @@ let jFLocalAddListeners = () => {
     // let jVarLocalReceiveButtonId = document.getElementById('ReceiveButtonId');
     // jVarLocalReceiveButtonId.addEventListener("click", ReceiveFunc);
 
-    let jVarLocalDeleteAllMessages = document.getElementById('DeleteAllMessages');
-    jVarLocalDeleteAllMessages.addEventListener("click", DeleteAllMessages);
+    // let jVarLocalDeleteAllMessages = document.getElementById('DeleteAllMessages');
+    // jVarLocalDeleteAllMessages.addEventListener("click", DeleteAllMessages);
 
     let jVarLocalMessageInputId = document.getElementById('MessageInputId');
     jVarLocalMessageInputId.addEventListener("keydown", (event) => {
